@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="623.0" prefWidth="777.0" styleClass="root" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arkadiuszb.projecttm.TaskController">
+<children>
+    <Button fx:id="addTask" layoutX="14.0" layoutY="547.0" onAction="#addTask" prefHeight="25.0" prefWidth="131.0" text="Dodaj zadanie" />
+    <TableView fx:id="taskTable" layoutX="19.0" layoutY="25.0" prefHeight="474.0" prefWidth="732.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="241.0" text="Nazwa" />
+            <TableColumn fx:id="priorityColumn" prefWidth="75.0" text="Priorytet" />
+            <TableColumn fx:id="dateColumn" prefWidth="118.0" text="Data wykonania" />
+            <TableColumn fx:id="catColumn" prefWidth="118.0" text="Kategoria" />
+            <TableColumn fx:id="statColumn" prefWidth="118.0" text="Status" />
+        </columns>
+    </TableView>
+    <Button fx:id="executeTask" layoutX="171.0" layoutY="547.0" onAction="#executeTask" prefHeight="25.0" prefWidth="131.0" text="Wykonaj zadanie" />
+    <Button fx:id="deleteTask" layoutX="329.0" layoutY="547.0" onAction="#deleteTask" prefHeight="25.0" prefWidth="131.0" text="Usuń zadanie" />
+    <TextField fx:id="nameTaskText" layoutX="14.0" layoutY="512.0" promptText="Nazwa zadania" />
+    <TextField fx:id="dateTaskText" layoutX="329.0" layoutY="512.0" prefHeight="25.0" prefWidth="197.0" promptText=" Data wykonania &quot;RRRR-MM-DD&quot;" />
+      <ComboBox fx:id="categoryBox" layoutX="547.0" layoutY="512.0" onAction="#select" prefHeight="30.0" prefWidth="204.0" promptText="Wybierz kategorie" styleClass="combo-box" />
+      <ComboBox fx:id="priorityBox" layoutX="171.0" layoutY="512.0" prefWidth="150.0" promptText="Wybierz priorytet" styleClass="combo-box" />
+      <Label layoutX="19.0" layoutY="584.0" text="Dzisiejsza data:" />
+      <Label fx:id="dateLabel" layoutX="132.0" layoutY="584.0" prefHeight="17.0" prefWidth="142.0" />
+</children>
+</AnchorPane>
