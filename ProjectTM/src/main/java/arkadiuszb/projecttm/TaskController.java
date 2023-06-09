@@ -96,7 +96,7 @@ public class TaskController implements Initializable {
 
     }
 
-   // // metoda czyszcząca wszyskie wypełnione pola
+    // metoda czyszcząca wszyskie wypełnione pola
  private void clearInputFields(){
      nameTaskText.clear();;
      priorityBox.getSelectionModel().clearSelection();
